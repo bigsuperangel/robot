@@ -4,6 +4,9 @@ import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.fj.hiwetoptools.web.HttpUtil;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * Created by linyu on 2016/8/5.
  */
@@ -16,7 +19,11 @@ public class Robot {
 
     public static String xiaodoubi(String msg) {
         String url = ITPK_API + KEY + "&question=" + msg;
-        String result = HttpUtil.get(url);
+        Map<String,String> map = new HashMap<>();
+        map.put("api_key","13b52e0033109dd0e3a17570a63b9395");
+        map.put("api_secret","rgif59isberr");
+        map.put("question",msg);
+        String result = HttpUtil.get(ITPK_API,map);
         result = SignUtil.doSign(msg, result);
         return result;
     }
@@ -27,4 +34,5 @@ public class Robot {
         JSONObject j = JSON.parseObject(result);
         return j.getString("text");
     }
+
 }

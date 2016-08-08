@@ -6,7 +6,7 @@
 
     <groupId>com.fj</groupId>
     <artifactId>robot</artifactId>
-    <version>1.0</version>
+    <version>2.0.0-SNAPSHOT</version>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
@@ -58,10 +58,15 @@
 
     <distributionManagement>
         <repository>
-            <id>nexus</id>
-            <name>maven-snapshots</name>
+            <id>nexus-releases</id>
+            <name>maven-releases</name>
             <url>http://192.168.0.114:8081/repository/maven-releases/</url>
         </repository>
+        <snapshotRepository>
+            <id>nexus-snapshots</id>
+            <name>maven-snapshots</name>
+            <url>http://192.168.0.114:8081/repository/maven-snapshots/</url>
+        </snapshotRepository>
     </distributionManagement>
 
     <build>
