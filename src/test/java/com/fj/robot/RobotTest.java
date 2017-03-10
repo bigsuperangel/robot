@@ -7,9 +7,9 @@ import org.junit.Test;
  * Created by linyu on 2016/8/5.
  */
 public class RobotTest {
-/*    @Test
+    @Test
     public void test(){
         String result = Robot.xiaodoubi("笑话");
         Assert.assertNotNull(result);
-    }*/
+    }
 }

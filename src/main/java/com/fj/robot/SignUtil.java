@@ -2,7 +2,7 @@ package com.fj.robot;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
-import com.fj.hiwetoptools.StringUtil;
+import com.fj.hiwetoptools.StrUtil;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,7 +26,7 @@ public class SignUtil {
         }
         JSONObject j = JSON.parseObject(result);
         String type = j.getString("type");
-        if(StringUtil.isNotBlank(type)){
+        if(StrUtil.isNotBlank(type)){
             StringBuffer sb = new StringBuffer(type);
             if(type.equals("观音灵签")){
                 sb.append("\n签语：")

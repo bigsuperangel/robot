@@ -11,33 +11,32 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
+    <!-- 设定主仓库，按设定顺序进行查找。 -->
     <repositories>
-        <!-- 私服 -->
-        <repository>
-            <id>nexus-repos</id>
-            <name>maven-public</name>
-            <url>http://192.168.0.114:8081/repository/maven-public/</url>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-        </repository>
 
+        <!-- 如有Nexus私服, 取消注释并指向正确的服务器地址. -->
+        <!-- <repository> <id>nexus-repos</id> <name>maven-public</name> <url>http://192.168.0.114:8081/repository/maven-public/</url>
+            <snapshots> <enabled>true</enabled> </snapshots> <releases> <enabled>true</enabled>
+            </releases> </repository> -->
+        <!-- 设定主仓库，按设定顺序进行查找。 -->
+        <repository>
+            <id>alimaven</id>
+            <name>aliyun maven</name>
+            <url>http://maven.aliyun.com/nexus/content/groups/public</url>
+        </repository>
     </repositories>
 
+    <!-- 设定插件仓库 -->
     <pluginRepositories>
+        <!-- <pluginRepository> <id>nexus-repos</id> <name>maven-public</name>
+            <url>http://192.168.0.114:8081/repository/maven-public/</url> <releases>
+            <enabled>true</enabled> </releases> <snapshots> <enabled>false</enabled>
+            </snapshots> </pluginRepository> -->
+
         <pluginRepository>
-            <id>nexus-repos</id>
-            <name>maven-public</name>
-            <url>http://192.168.0.114:8081/repository/maven-public/</url>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
+            <id>alimaven</id>
+            <name>aliyun maven</name>
+            <url>http://maven.aliyun.com/nexus/content/groups/public</url>
         </pluginRepository>
     </pluginRepositories>
 
@@ -45,7 +44,19 @@
         <dependency>
             <groupId>com.fj</groupId>
             <artifactId>hiwetoptools</artifactId>
-            <version>2.1.1-SNAPSHOT</version>
+            <version>3.3.0-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>1.2.17</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+            <version>1.7.21</version>
         </dependency>
 
         <dependency>

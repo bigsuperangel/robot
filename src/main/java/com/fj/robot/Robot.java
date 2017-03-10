@@ -2,8 +2,7 @@ package com.fj.robot;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
-import com.fj.hiwetoptools.web.HttpUtil;
-import sun.security.krb5.internal.crypto.Aes128CtsHmacSha1EType;
+import com.fj.hiwetoptools.http.HttpUtil;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -17,7 +16,7 @@ public class Robot {
     private static final String TULING_API = "http://www.tuling123.com/openapi/api";
 
     public static String xiaodoubi(String msg) {
-        Map<String,String> map = new HashMap<>();
+        Map<String,Object> map = new HashMap<>();
         map.put("api_key","13b52e0033109dd0e3a17570a63b9395");
         map.put("api_secret","rgif59isberr");
         map.put("question",msg);
@@ -27,7 +26,7 @@ public class Robot {
     }
 
     public static String tuling(String msg,String userId){
-        Map map = new HashMap();
+        Map<String,Object> map = new HashMap<>();
         map.put("key", "6cf833817aab217eca8bf182b63270c0");
         map.put("info", msg);
         map.put("userId",userId);
