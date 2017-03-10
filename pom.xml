@@ -49,7 +49,7 @@
         <dependency>
             <groupId>com.github.bigsuperangel</groupId>
             <artifactId>hiwetoptools</artifactId>
-            <version>master-SNAPSHOT</version>
+            <version>3.3.0</version>
         </dependency>
 
         <dependency>
